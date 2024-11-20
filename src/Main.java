@@ -58,6 +58,9 @@ public class Main {
                     //img.setRGB(x, y, Color.RED.getRGB());
                 }
                 */
+                /*
+                draws points on the canvas
+                 */
                 for(int i=0; i<a.size(); i++) {
                     Polygon poly = new Polygon(a.get(i).get(0), a.get(i).get(1), a.get(i).get(0).length);
                     Color t=new Color((int) (Math.random()*255), (int) (Math.random()*255), (int) (Math.random()*255));
@@ -71,6 +74,7 @@ public class Main {
                 return new Dimension(800, 600);
             }
         };
+        //makes render visable
         mainF.getContentPane().add(p);
         mainF.setSize(800, 600);
         mainF.setVisible(true);

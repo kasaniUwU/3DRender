@@ -7,6 +7,12 @@ public class Camera {
     public Vector3 scale;
     public Camera(){
     }
+    /*
+    rendering hapens in 3 steps
+    1.translation
+    2.rotation
+    3,scaling
+     */
     public List<List<int[]>> renderMesh(Mesh a){
         List<Vector3> points=(List<Vector3>)a.points;
         int[] xPoly = new int[points.size()];
