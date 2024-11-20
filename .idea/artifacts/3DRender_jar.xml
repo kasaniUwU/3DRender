@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="3DRender:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/3DRender_jar</output-path>
+    <root id="archive" name="3DRender.jar">
+      <element id="module-output" name="3DRender" />
+    </root>
+  </artifact>
+</component>
