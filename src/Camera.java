@@ -84,9 +84,9 @@ public class Camera {
     }
     public List<List<Vector3>> renderMeshPoints(Mesh a){
         List<Vector3> points=(List<Vector3>)a.points;
-        int[] xPoly = new int[points.size()];
-        int[] yPoly = new int[points.size()];
-        int[] zPoly = new int[points.size()];
+        double[] xPoly = new double[points.size()];
+        double[] yPoly = new double[points.size()];
+        double[] zPoly = new double[points.size()];
         for (int i = 0; i < points.size(); i++) {
             Vector3 point = points.get(i);
             points.set(i, Vector3.subtract(point, position));
@@ -126,9 +126,9 @@ public class Camera {
         for (int i = 0; i < points.size(); i++) {
             Vector3 point = points.get(i);
             if (point.z != 0) { // Avoid division by zero
-                xPoly[i] = (int) point.x;
-                yPoly[i] = (int) point.y;
-                zPoly[i] = (int) point.z;
+                xPoly[i] =  point.x;
+                yPoly[i] =  point.y;
+                zPoly[i] =  point.z;
             }
         }
         List<List<Vector3>> out=new ArrayList<>();

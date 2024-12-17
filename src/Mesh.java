@@ -4,9 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * a class that contaions all the faces and points of a mesh
+ */
 public class Mesh {
     public List<Vector3> points =new ArrayList<>();
     public List<List<Integer>> faces =new ArrayList<>();
+
+    /**
+     * makes a new mesh form a obj file
+     * @param fileString the obj file for the mesh
+     */
     public Mesh(String fileString){
         try {
             File file = new File(fileString);
@@ -35,6 +43,7 @@ public class Mesh {
                     }
                     tempList.add(Integer.valueOf(temp.substring(0,temp.indexOf("/"))));
                     faces.add(tempList);
+
                 }
             }
             fileIn.close();
